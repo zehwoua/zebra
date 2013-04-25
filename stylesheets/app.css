@@ -1,0 +1,211 @@
+/* line 4, ../sass/app.scss */
+#body_wrap {
+  overflow: hidden;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0px 0px 8px #888888;
+}
+/* line 9, ../sass/app.scss */
+#body_wrap.boxed {
+  width: 80%;
+}
+/* line 10, ../sass/app.scss */
+#body_wrap.full {
+  width: 100%;
+}
+
+/* line 12, ../sass/app.scss */
+#header {
+  width: 100%;
+}
+/* line 14, ../sass/app.scss */
+#header.Fixed {
+  position: fixed;
+}
+/* line 17, ../sass/app.scss */
+#header.Static {
+  position: static;
+}
+/* line 20, ../sass/app.scss */
+#header .inner {
+  padding: 20px;
+}
+/* line 21, ../sass/app.scss */
+#header #site-information {
+  float: left;
+}
+/* line 24, ../sass/app.scss */
+#header #header-navigation {
+  float: right;
+}
+
+/* line 28, ../sass/app.scss */
+a {
+  -webkit-transition: all 0.14s ease 0s;
+  -moz-transition: all 0.14s ease 0s;
+  -o-transition: all 0.14s ease 0s;
+  outline: none;
+  text-decoration: none;
+}
+
+/* line 35, ../sass/app.scss */
+.inner {
+  padding: 0 20px;
+}
+
+/* MAIN NAVIGATION DEFAULT STYLE */
+/* line 38, ../sass/app.scss */
+#header_navigation {
+  margin: 0;
+  padding: 0;
+}
+/* line 41, ../sass/app.scss */
+#header_navigation li {
+  list-style-type: none;
+  float: left;
+  position: relative;
+}
+/* line 45, ../sass/app.scss */
+#header_navigation li a {
+  display: block;
+  padding: 20px 10px;
+  color: #4f4f4f;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+/* line 52, ../sass/app.scss */
+#header_navigation li a:hover {
+  text-decoration: none;
+}
+/* line 57, ../sass/app.scss */
+#header_navigation li:hover a {
+  background: #4f4f4f;
+  color: #fff;
+}
+/* line 63, ../sass/app.scss */
+#header_navigation li.current-menu-item a {
+  color: #fff;
+}
+/* line 67, ../sass/app.scss */
+#header_navigation li.current-menu-item:hover a {
+  color: #fff;
+}
+/* line 70, ../sass/app.scss */
+#header_navigation li.current-menu-item:hover li a {
+  background: #4f4f4f;
+  color: #8f8f8f;
+}
+/* line 76, ../sass/app.scss */
+#header_navigation li .sub-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  z-index: 10;
+}
+/* line 85, ../sass/app.scss */
+#header_navigation li .sub-menu li {
+  float: none;
+  border-top: 1px solid #5f5f5f;
+}
+/* line 88, ../sass/app.scss */
+#header_navigation li .sub-menu li a {
+  color: #8f8f8f;
+  background: #4f4f4f;
+  font-size: 12px;
+}
+/* line 92, ../sass/app.scss */
+#header_navigation li .sub-menu li a:hover {
+  color: #fff;
+}
+
+/* line 100, ../sass/app.scss */
+#main_content {
+  margin-top: 30px;
+}
+/* line 102, ../sass/app.scss */
+#main_content #sidebar {
+  width: 20%;
+}
+/* line 105, ../sass/app.scss */
+#main_content #content {
+  width: 78%;
+}
+
+/*========== BLOG ==========*/
+/* line 117, ../sass/app.scss */
+.blog_info {
+  width: 9%;
+  min-width: 75px;
+  float: left;
+  margin-bottom: 2%;
+}
+/* line 122, ../sass/app.scss */
+.blog_info .post_date {
+  padding: 8px 0px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/* line 125, ../sass/app.scss */
+.blog_info .post_date span {
+  display: block;
+  padding: 2px 0;
+}
+/* line 128, ../sass/app.scss */
+.blog_info .post_date span.month {
+  font-size: 13px;
+}
+/* line 131, ../sass/app.scss */
+.blog_info .post_date span.day {
+  font-size: 22px;
+}
+/* line 134, ../sass/app.scss */
+.blog_info .post_date span.year {
+  font-size: 13px;
+}
+/* line 139, ../sass/app.scss */
+.blog_info .post_comments {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: #4f4f4f;
+  font-size: 10px;
+  padding: 12px 0;
+}
+/* line 144, ../sass/app.scss */
+.blog_info .post_comments a {
+  color: white;
+}
+/* line 146, ../sass/app.scss */
+.blog_info .post_comments a span {
+  display: block;
+  padding-bottom: 5px;
+  font-size: 22px;
+}
+
+/* line 154, ../sass/app.scss */
+.post_title {
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+/* line 162, ../sass/app.scss */
+.post_title a:hover {
+  color: #4f4f4f;
+}
+
+/* line 167, ../sass/app.scss */
+.post_content {
+  float: right;
+  width: 87%;
+}

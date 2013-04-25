@@ -1,0 +1,27 @@
+@import "settings";
+
+$main_color : #B11623;
+
+#header{
+  #header_navigation{
+    li{
+      &.current-menu-item{
+        a{
+          background: $main_color;
+        }
+      }
+      &.menu-parent-item{
+        .sub-menu li a{
+          background: $dark_gray;
+        }
+      }
+    }
+  }
+}
+
+.post_date{
+  background: $main_color;
+}
+.post_title a{
+  color: $main_color;
+}
