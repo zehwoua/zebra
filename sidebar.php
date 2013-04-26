@@ -1,22 +1,11 @@
-<!-- begin sidebar -->
 <div id="sidebar">
-  <div class="inner">
-    <ul>
-      <li id="search">
-        <label for="s"><?php _e('Search:'); ?></label>
-        <form id="searchform" method="get" action="<?php bloginfo('home'); ?>">
-          <div>
-            <input type="text" name="s" id="s" size="15" /><br />
-            <input type="submit" value="<?php esc_attr_e('Search'); ?>" />
-          </div>
-        </form>
-      </li>
-      <li id="archives"><?php _e('Archives:'); ?>
-        <ul>
-        <?php wp_get_archives('type=monthly'); ?>
-        </ul>
-      </li>
-    </ul>
-  </div><!--/inner-->
-</div><!-- end sidebar -->
+  <ul>
+    <?php $active_sidebar1 = is_active_sidebar('sidebar1'); ?>
+    <?php if ($active_sidebar1) { ?>
+      <?php dynamic_sidebar('sidebar1'); ?>
+    <?php }else{  ?>
+      <li>Please activate some widgets </li>
+    <?php } ?>
 
+  </ul>
+</div>

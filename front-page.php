@@ -1,7 +1,7 @@
 <?php get_header();?>
 
 <div id="slider"></div><!--/slider-->
-
+test
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <?php the_date('','<h2>','</h2>'); ?>
@@ -28,5 +28,9 @@
 <?php endif; ?>
 
 <?php posts_nav_link(' &#8212; ', __('&laquo; Newer Posts'), __('Older Posts &raquo;')); ?>
+        </div><!--/inner-->
+      </div><!--/content-->
+<?php get_sidebar(); ?>
+      <?php get_sidebar('homepage'); ?>
 
 <?php get_footer(); ?>

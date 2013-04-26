@@ -1,7 +1,7 @@
 @import "settings";
 
 
-#body_wrap{
+#body_wrap, #footer_wrap{
   overflow: hidden;
   margin: 0 auto;
   background: white;
@@ -136,7 +136,7 @@ a {
       }
     }
   }
-  .post_comments{
+  .post_comments_number{
     @include blog_info_default;
     background: $dark_gray;
     font-size: 10px;
@@ -151,20 +151,78 @@ a {
     }
   }
 }
-.post_title{
-  font-size: 20px;
-  line-height: 20px;
-  margin-bottom: 15px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-top: 20px;
-  a{
-    &:hover{
-      color:$dark_gray;
+
+.post_container{
+  margin-bottom: 5%;
+  padding-bottom: 5%;
+  .post_content{
+    float: right;
+    width: 87%;
+    .post_title{
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-top: 20px;
+      a{
+        &:hover{
+          color:$dark_gray;
+        }
+      }
+    }
+    .storycontent{
+      margin-top: 20px;
+      p{
+        color: #4f4f4f;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.1em;
+      }
+    }
+    .meta{
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      margin-top: 6px;
+      a{
+        color: #9f9f9f;
+      }
+    }
+  }
+  .post_tags{
+    a{
+      display: inline-block;
+      color: white;
+      font-size: 10px;
+      padding: 5px 10px;
+      letter-spacing: 2px;
+      margin-right: 10px;
+      margin-top: 20px;
+      text-transform: uppercase;
+      &:hover{
+        opacity:0.8;
+      }
     }
   }
 }
-.post_content{
-  float: right;
-  width: 87%;
+#comments_section{
+  clear:both;
+}
+/*=========== WIDGET ===========*/
+#sidebar{margin-bottom: 20px;}
+h3.widget_title{
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #4f4f4f;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/*=========== FOOTER ===========*/
+#footer{
+  background: $dark_gray;
+  margin-top: 40px;
+  min-height: 200px;
+  #footer_wrap{
+    background: none;
+    box-shadow: none;
+  }
 }

@@ -76,3 +76,32 @@ add_menu_page($themename, $themename, 'administrator', basename(__FILE__), 'myth
 }
 
 add_theme_support('post-thumbnails');
+function add_zebra_sidebars(){
+	// Register new Sidebar
+	if( function_exists('register_sidebar')){
+		register_sidebar(array(
+			'name' => 'Sidebar',
+			'id' => 'sidebar1',
+			'before_widget' => '<li id="%1$s" class="%2$s widget">',
+			'after_widget' => '</li>',
+			'before_title' => '<h3 class="widget_title">',
+			'after_title' => '</h3>'
+			));
+	}
+
+	// Create new sidebars
+	if(function_exists('register_sidebar')){
+		register_sidebar(array(
+			'name' => 'Homepage Sidebar',
+			'id' => 'homepage-sidebar',
+			'description' => 'this is homepage sidebar',
+			'before_widget' => '<li id="%1$s" class="%2$s widget">',
+			'after_widget' => '</li>',
+			'before_title' => '<h3 class="widget_title">',
+			'after_title' => '</h3>'
+			));
+	}
+}
+	add_action( 'widgets_init', 'add_zebra_sidebars' );
+
+

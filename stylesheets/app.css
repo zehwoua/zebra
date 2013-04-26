@@ -1,16 +1,16 @@
 /* line 4, ../sass/app.scss */
-#body_wrap {
+#body_wrap, #footer_wrap {
   overflow: hidden;
   margin: 0 auto;
   background: white;
   box-shadow: 0px 0px 8px #888888;
 }
 /* line 9, ../sass/app.scss */
-#body_wrap.boxed {
+#body_wrap.boxed, #footer_wrap.boxed {
   width: 80%;
 }
 /* line 10, ../sass/app.scss */
-#body_wrap.full {
+#body_wrap.full, #footer_wrap.full {
   width: 100%;
 }
 
@@ -170,7 +170,7 @@ a {
   font-size: 13px;
 }
 /* line 139, ../sass/app.scss */
-.blog_info .post_comments {
+.blog_info .post_comments_number {
   color: white;
   text-align: center;
   text-transform: uppercase;
@@ -180,32 +180,104 @@ a {
   padding: 12px 0;
 }
 /* line 144, ../sass/app.scss */
-.blog_info .post_comments a {
+.blog_info .post_comments_number a {
   color: white;
 }
 /* line 146, ../sass/app.scss */
-.blog_info .post_comments a span {
+.blog_info .post_comments_number a span {
   display: block;
   padding-bottom: 5px;
   font-size: 22px;
 }
 
-/* line 154, ../sass/app.scss */
-.post_title {
+/* line 155, ../sass/app.scss */
+.post_container {
+  margin-bottom: 5%;
+  padding-bottom: 5%;
+}
+/* line 158, ../sass/app.scss */
+.post_container .post_content {
+  float: right;
+  width: 87%;
+}
+/* line 161, ../sass/app.scss */
+.post_container .post_content .post_title {
   font-size: 20px;
   line-height: 20px;
-  margin-bottom: 15px;
   font-weight: bold;
   text-transform: uppercase;
   margin-top: 20px;
 }
-/* line 162, ../sass/app.scss */
-.post_title a:hover {
+/* line 168, ../sass/app.scss */
+.post_container .post_content .post_title a:hover {
   color: #4f4f4f;
 }
+/* line 173, ../sass/app.scss */
+.post_container .post_content .storycontent {
+  margin-top: 20px;
+}
+/* line 175, ../sass/app.scss */
+.post_container .post_content .storycontent p {
+  color: #4f4f4f;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+}
+/* line 182, ../sass/app.scss */
+.post_container .post_content .meta {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  margin-top: 6px;
+}
+/* line 186, ../sass/app.scss */
+.post_container .post_content .meta a {
+  color: #9f9f9f;
+}
+/* line 192, ../sass/app.scss */
+.post_container .post_tags a {
+  display: inline-block;
+  color: white;
+  font-size: 10px;
+  padding: 5px 10px;
+  letter-spacing: 2px;
+  margin-right: 10px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+/* line 201, ../sass/app.scss */
+.post_container .post_tags a:hover {
+  opacity: 0.8;
+}
 
-/* line 167, ../sass/app.scss */
-.post_content {
-  float: right;
-  width: 87%;
+/* line 207, ../sass/app.scss */
+#comments_section {
+  clear: both;
+}
+
+/*=========== WIDGET ===========*/
+/* line 211, ../sass/app.scss */
+#sidebar {
+  margin-bottom: 20px;
+}
+
+/* line 212, ../sass/app.scss */
+h3.widget_title {
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #4f4f4f;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/*=========== FOOTER ===========*/
+/* line 220, ../sass/app.scss */
+#footer {
+  background: #4f4f4f;
+  margin-top: 40px;
+  min-height: 200px;
+}
+/* line 224, ../sass/app.scss */
+#footer #footer_wrap {
+  background: none;
+  box-shadow: none;
 }

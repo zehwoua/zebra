@@ -1,6 +1,6 @@
 /* line 9, ../sass/orange.scss */
 #header #header_navigation li.current-menu-item a {
-  background: #f54828;
+  background: #00c176;
 }
 /* line 14, ../sass/orange.scss */
 #header #header_navigation li.menu-parent-item .sub-menu li a {
@@ -9,10 +9,24 @@
 
 /* line 22, ../sass/orange.scss */
 .post_date {
-  background: #f54828;
+  background: #00c176;
 }
 
 /* line 25, ../sass/orange.scss */
 .post_title a {
-  color: #f54828;
+  color: #00c176;
+}
+
+/* line 28, ../sass/orange.scss */
+.post_container {
+  border-bottom: 3px solid #00c176;
+}
+/* line 32, ../sass/orange.scss */
+.post_container .post_content .meta a:hover {
+  color: #00c176;
+}
+
+/* line 39, ../sass/orange.scss */
+.post_tags a {
+  background: #00c176;
 }

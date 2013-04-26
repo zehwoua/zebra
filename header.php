@@ -33,6 +33,13 @@
    if(get_option('zbr_custom_tapography') == 'true'){
      $fonts_nav = get_option('zbr_site_nav_styling');
      display_fonts('#header_navigation a',$fonts_nav);
+
+     $fonts_nav = get_option('zbr_sidebar_widget_title');
+     display_fonts('h3.widget_title',$fonts_nav);
+
+     $fonts_nav = get_option('zbr_post_title');
+     display_fonts('h2.post_title a',$fonts_nav);
+
    }
    display_bg_settings('body','body');
    display_bg_settings('header','#header');
@@ -84,7 +91,7 @@
   </div><!--/.inner-->
 </div><!--/header-->
 <div id="main_content" class="clearfix">
-  <div class="inner">
+  <div class="inner clearfix">
     <div id="content">
       <div class="inner clearfix">
 

@@ -1,6 +1,6 @@
 @import "settings";
 
-$main_color : #F54828;
+$main_color : #00C176;
 
 #header{
   #header_navigation{
@@ -24,4 +24,19 @@ $main_color : #F54828;
 }
 .post_title a{
   color: $main_color;
+}
+.post_container{
+  border-bottom: 3px solid $main_color;
+  .post_content{
+    .meta{
+      a:hover{
+        color:$main_color;
+      }
+    }
+  }
+}
+.post_tags{
+  a{
+    background:$main_color;
+  }
 }

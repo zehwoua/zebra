@@ -1,14 +1,5 @@
-<?php
-/*
-Template Name: Blog Page
-*/
-?>
-
 <?php get_header();?>
-<?php $args = array(
-  'post_type' => 'post');
-?>
-<?php query_posts($args); ?>
+
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
   <div <?php post_class('clearfix post_container') ?> id="post-<?php the_ID(); ?>">
     <div class="blog_info">
@@ -37,7 +28,7 @@ Template Name: Blog Page
     ?>
       <div class="storycontent">
         <?php //the_content(__('(more...)')); ?>
-        <?php the_excerpt('read more'); ?>
+        <?php the_content(); ?>
       </div><!--/storycontent-->
       <div class="post_tags"><?php the_tags(__('TAGS: '), ' ', ''); ?></div>
       <div class="feedback">
@@ -46,6 +37,7 @@ Template Name: Blog Page
 
     </div><!--/post content-->
 
+    <div id="comments_section" class="clearfix"><?php comments_template(); // Get wp-comments.php template ?></div>
 </div><!--/post-->
 <?php endwhile; else: ?>
 <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>

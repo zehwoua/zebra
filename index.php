@@ -26,5 +26,8 @@
 <?php endif; ?>
 
 <?php posts_nav_link(' &#8212; ', __('&laquo; Newer Posts'), __('Older Posts &raquo;')); ?>
+        </div><!--/inner-->
+      </div><!--/content-->
 
+      <?php get_sidebar(); ?>
 <?php get_footer(); ?>

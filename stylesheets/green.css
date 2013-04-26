@@ -16,3 +16,17 @@
 .post_title a {
   color: #00c176;
 }
+
+/* line 28, ../sass/green.scss */
+.post_container {
+  border-bottom: 3px solid #00c176;
+}
+/* line 32, ../sass/green.scss */
+.post_container .post_content .meta a:hover {
+  color: #00c176;
+}
+
+/* line 39, ../sass/green.scss */
+.post_tags a {
+  background: #00c176;
+}

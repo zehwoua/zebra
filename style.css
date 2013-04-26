@@ -131,9 +131,7 @@ ul.post-meta span.post-meta-key {
 }
 
 .meta, .meta a {
-  color: #808080;
-  font-weight: normal;
-  letter-spacing: 0;
+
 }
 
 .storytitle {
@@ -187,13 +185,7 @@ margin: 0;
 }
 
 #sidebar {
-  background: #fff;
-  border-left: 1px dotted #ccc;
-  border-top: 3px solid #e0e6e0;
-  right: 2px;
-  top: 0;
-  width: 11em;
-  float: right;
+
 }
 
 #menu form {
