@@ -325,6 +325,14 @@ $options = array (
     "type" => "text",
     "std" => ""),
 
+  array( "name" => "Footer Layout",
+    "desc" => "Select your theme's number of footer layout",
+    "id" => $shortname."_footer_widget_layout",
+    "type" => "radio",
+    "stly" => "bg",
+    "options" => array("1" => "s.png", "2" => "s.png", "3" => "s.png", "4" => "s.png"),
+    "std" => "3"),
+
   array( "name" => "Google Analytics Code",
     "desc" => "You can paste your Google Analytics or other tracking code in this box. This will be automatically added to the footer.",
     "id" => $shortname."_ga_code",

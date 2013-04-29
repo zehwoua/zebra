@@ -1,13 +1,15 @@
 @import "settings";
 
-$main_color : #00C176;
+$color1 : #5E504B;
+$color2 :#E9C4BC;
+$color3 :#D9D3C6;
 
 #header{
   #header_navigation{
     li{
       &.current-menu-item{
         a{
-          background: $main_color;
+          background: $color2;
         }
       }
       &.menu-parent-item{
@@ -18,25 +20,55 @@ $main_color : #00C176;
     }
   }
 }
-
-.post_date{
-  background: $main_color;
+#main_content{
+  .widget{
+    background: $color1;
+    .tagcloud{
+      a{
+        background: $color2;
+        &:hover{
+          background:#fff;
+        }
+      }
+    }
+  }
 }
-.post_title a{
-  color: $main_color;
+.post_content{
+  background: $color3;
+  padding: 2%;
+  .meta{
+    border-bottom: 1px solid rgb(185, 181, 172);
+    padding-bottom: 20px;
+  }
+}
+.post_date{
+  background: $color2;
+}
+.post_title a,.post_title{
+  color: $dark_gray;
 }
 .post_container{
-  border-bottom: 3px solid $main_color;
   .post_content{
     .meta{
       a:hover{
-        color:$main_color;
+        color:#fff;
       }
     }
   }
 }
 .post_tags{
   a{
-    background:$main_color;
+    background:$color2;
+  }
+}
+#comments{
+  .comment{
+    background: $color3;
+    .comment-edit-link{
+      background: $color1;
+    }
+  }
+  .avatar{
+    background: $color2;
   }
 }

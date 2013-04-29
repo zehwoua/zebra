@@ -76,6 +76,13 @@ add_menu_page($themename, $themename, 'administrator', basename(__FILE__), 'myth
 }
 
 add_theme_support('post-thumbnails');
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	Zebras Custom Sidebars
+/*-----------------------------------------------------------------------------------*/
+
+
 function add_zebra_sidebars(){
 	// Register new Sidebar
 	if( function_exists('register_sidebar')){
@@ -102,6 +109,82 @@ function add_zebra_sidebars(){
 			));
 	}
 }
-	add_action( 'widgets_init', 'add_zebra_sidebars' );
 
 
+add_action( 'widgets_init', 'add_zebra_sidebars' );
+
+/*-----------------------------------------------------------------------------------*/
+/*	Zebras Custom Footers
+/*-----------------------------------------------------------------------------------*/
+
+
+function add_zebra_footers(){
+	// Register new Sidebar
+	$footer_widget = get_option('zbr_footer_widget_layout');
+	for($i = 1; $i <= $footer_widget; $i++){
+		if( function_exists('register_sidebar')){
+			register_sidebar(array(
+				'name' => 'Footer Widget '.$i,
+				'id' => 'footer_widget_'.$i,
+				'before_widget' => '<li id="%1$s" class="%2$s widget">',
+				'after_widget' => '</li>',
+				'before_title' => '<h3 class="widget_title">',
+				'after_title' => '</h3>'
+				));
+		}
+	}
+}
+
+
+add_action( 'widgets_init', 'add_zebra_footers' );
+
+/*-----------------------------------------------------------------------------------*/
+/*	Zebras Custom Widgets
+/*-----------------------------------------------------------------------------------*/
+
+include($functions_path .'widget-recent-posts.php');
+include($functions_path .'widget-popular-posts.php');
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	Zebras Post view Count
+/*-----------------------------------------------------------------------------------*/
+
+// function to display number of posts.
+function getPostViews($postID){
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+        return '0 View';
+    }
+    return $count.' Views';
+}
+
+// function to count views.
+function setPostViews($postID) {
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+    }else{
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+
+// Add it to a column in WP-Admin - (Optional)
+add_filter('manage_posts_columns', 'posts_column_views');
+add_action('manage_posts_custom_column', 'posts_custom_column_views',5,2);
+function posts_column_views($defaults){
+    $defaults['post_views'] = __('Views');
+    return $defaults;
+}
+function posts_custom_column_views($column_name, $id){
+    if($column_name === 'post_views'){
+        echo getPostViews(get_the_ID());
+    }
+}

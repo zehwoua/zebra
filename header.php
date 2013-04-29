@@ -17,6 +17,7 @@
   </style>
   <link rel="icon" type="image/png" href="<?php if(get_option('zbr_favicon') != ""){ echo get_option('zbr_favicon'); }?>" />
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
   <style type="text/css">
   <?php
   if(get_option('zbr_site_title') == 'true'){
@@ -60,8 +61,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="body_wrap" class="<?php if(get_option('zbr_body_layout')) echo get_option('zbr_body_layout'); ?>">
 <div id="header" class="clearfix <?php if(get_option('zbr_header_position')) echo get_option('zbr_header_position'); ?>">
+  <div id="header_wrap" class="wrap <?php if(get_option('zbr_body_layout')) echo get_option('zbr_body_layout'); ?>">
   <div class="inner clearfix">
     <div id="site-information">
       <?php if(get_option('zbr_site_title') == ''){ ?>
@@ -89,9 +90,16 @@
       <?php } ?>
     </nav>
   </div><!--/.inner-->
+</div><!--/header-wrap-->
 </div><!--/header-->
+<h1 id="page-title">
+  <div class="wrap <?php if(get_option('zbr_body_layout')) echo get_option('zbr_body_layout'); ?>">
+    <div class="inner">
+      <span><?php the_title(); ?></span>
+    </div><!--/inner-->
+  </div>
+</h1>
 <div id="main_content" class="clearfix">
-  <div class="inner clearfix">
-    <div id="content">
-      <div class="inner clearfix">
-
+  <div id="body_wrap" class="wrap <?php if(get_option('zbr_body_layout')) echo get_option('zbr_body_layout'); ?>">
+    <div class="inner clearfix">
+      <div id="content">

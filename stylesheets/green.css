@@ -1,32 +1,65 @@
-/* line 9, ../sass/green.scss */
+/* line 11, ../sass/green.scss */
 #header #header_navigation li.current-menu-item a {
-  background: #00c176;
+  background: #e9c4bc;
 }
-/* line 14, ../sass/green.scss */
+/* line 16, ../sass/green.scss */
 #header #header_navigation li.menu-parent-item .sub-menu li a {
   background: #4f4f4f;
 }
 
-/* line 22, ../sass/green.scss */
-.post_date {
-  background: #00c176;
+/* line 24, ../sass/green.scss */
+#main_content .widget {
+  background: #5e504b;
+}
+/* line 27, ../sass/green.scss */
+#main_content .widget .tagcloud a {
+  background: #e9c4bc;
+}
+/* line 29, ../sass/green.scss */
+#main_content .widget .tagcloud a:hover {
+  background: #fff;
 }
 
-/* line 25, ../sass/green.scss */
-.post_title a {
-  color: #00c176;
+/* line 36, ../sass/green.scss */
+.post_content {
+  background: #d9d3c6;
+  padding: 2%;
 }
-
-/* line 28, ../sass/green.scss */
-.post_container {
-  border-bottom: 3px solid #00c176;
-}
-/* line 32, ../sass/green.scss */
-.post_container .post_content .meta a:hover {
-  color: #00c176;
-}
-
 /* line 39, ../sass/green.scss */
+.post_content .meta {
+  border-bottom: 1px solid #b9b5ac;
+  padding-bottom: 20px;
+}
+
+/* line 44, ../sass/green.scss */
+.post_date {
+  background: #e9c4bc;
+}
+
+/* line 47, ../sass/green.scss */
+.post_title a, .post_title {
+  color: #4f4f4f;
+}
+
+/* line 53, ../sass/green.scss */
+.post_container .post_content .meta a:hover {
+  color: #fff;
+}
+
+/* line 60, ../sass/green.scss */
 .post_tags a {
-  background: #00c176;
+  background: #e9c4bc;
+}
+
+/* line 65, ../sass/green.scss */
+#comments .comment {
+  background: #d9d3c6;
+}
+/* line 67, ../sass/green.scss */
+#comments .comment .comment-edit-link {
+  background: #5e504b;
+}
+/* line 71, ../sass/green.scss */
+#comments .avatar {
+  background: #e9c4bc;
 }

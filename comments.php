@@ -1,82 +1,60 @@
 <?php
 /**
+ * The template for displaying Comments.
+ *
+ * The area of the page that contains both current comments
+ * and the comment form. The actual display of comments is
+ * handled by a callback to twentytwelve_comment() which is
+ * located in the functions.php file.
+ *
  * @package WordPress
- * @subpackage Classic_Theme
+ * @subpackage Twenty_Twelve
+ * @since Twenty Twelve 1.0
  */
 
-if ( post_password_required() ) : ?>
-<p><?php _e('Enter your password to view comments.'); ?></p>
-<?php return; endif; ?>
+/*
+ * If the current post is protected by a password and
+ * the visitor has not yet entered the password we will
+ * return early without loading the comments.
+ */
+if ( post_password_required() )
+  return;
+?>
 
-<h2 id="comments"><?php comments_number(__('No Comments'), __('1 Comment'), __('% Comments')); ?>
-<?php if ( comments_open() ) : ?>
-	<a href="#postcomment" title="<?php _e("Leave a comment"); ?>">&raquo;</a>
-<?php endif; ?>
-</h2>
+<div id="comments" class="comments-area">
 
-<?php if ( have_comments() ) : ?>
-<ol id="commentlist">
+  <?php // You can start editing here -- including this comment! ?>
 
-<?php foreach ($comments as $comment) : ?>
-	<li <?php comment_class(); ?> id="comment-<?php comment_ID() ?>">
-	<?php echo get_avatar( $comment, 32 ); ?>
-	<?php comment_text() ?>
-	<p><cite><?php comment_type(_x('Comment', 'noun'), __('Trackback'), __('Pingback')); ?> <?php _e('by'); ?> <?php comment_author_link() ?> &#8212; <?php comment_date() ?> @ <a href="#comment-<?php comment_ID() ?>"><?php comment_time() ?></a></cite> <?php edit_comment_link(__("Edit This"), ' |'); ?></p>
-	</li>
+  <?php if ( have_comments() ) : ?>
+    <h2 class="comments-title">
+      <?php
+        printf( _n( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'twentytwelve' ),
+          number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
+      ?>
+    </h2>
 
-<?php endforeach; ?>
+    <ol class="commentlist">
+      <?php wp_list_comments( array('style' => 'ol' ) ); ?>
+    </ol><!-- .commentlist -->
 
-</ol>
+    <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
+    <nav id="comment-nav-below" class="navigation" role="navigation">
+      <h1 class="assistive-text section-heading"><?php _e( 'Comment navigation', 'twentytwelve' ); ?></h1>
+      <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'twentytwelve' ) ); ?></div>
+      <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'twentytwelve' ) ); ?></div>
+    </nav>
+    <?php endif; // check for comment navigation ?>
 
-<?php else : // If there are no comments yet ?>
-	<p><?php _e('No comments yet.'); ?></p>
-<?php endif; ?>
+    <?php
+    /* If there are no comments and comments are closed, let's leave a note.
+     * But we only want the note on posts and pages that had comments in the first place.
+     */
+    if ( ! comments_open() && get_comments_number() ) : ?>
+    <p class="nocomments"><?php _e( 'Comments are closed.' , 'twentytwelve' ); ?></p>
+    <?php endif; ?>
 
-<p><?php post_comments_feed_link(__('<abbr title="Really Simple Syndication">RSS</abbr> feed for comments on this post.')); ?>
-<?php if ( pings_open() ) : ?>
-	<a href="<?php trackback_url() ?>" rel="trackback"><?php _e('TrackBack <abbr title="Universal Resource Locator">URL</abbr>'); ?></a>
-<?php endif; ?>
-</p>
+  <?php endif; // have_comments() ?>
 
-<?php if ( comments_open() ) : ?>
-<h2 id="postcomment"><?php _e('Leave a comment'); ?></h2>
+  <?php comment_form(); ?>
 
-<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
-<p><?php printf(__('You must be <a href="%s">logged in</a> to post a comment.'), wp_login_url( get_permalink() ) );?></p>
-<?php else : ?>
-
-<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
-
-<?php if ( is_user_logged_in() ) : ?>
-
-<p><?php printf(__('Logged in as %s.'), '<a href="'.get_option('siteurl').'/wp-admin/profile.php">'.$user_identity.'</a>'); ?> <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php _e('Log out of this account') ?>"><?php _e('Log out &raquo;'); ?></a></p>
-
-<?php else : ?>
-
-<p><input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" />
-<label for="author"><small><?php _e('Name'); ?> <?php if ($req) _e('(required)'); ?></small></label></p>
-
-<p><input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" />
-<label for="email"><small><?php _e('Mail (will not be published)');?> <?php if ($req) _e('(required)'); ?></small></label></p>
-
-<p><input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
-<label for="url"><small><?php _e('Website'); ?></small></label></p>
-
-<?php endif; ?>
-
-<!--<p><small><strong>XHTML:</strong> <?php printf(__('You can use these tags: %s'), allowed_tags()); ?></small></p>-->
-
-<p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
-
-<p><input name="submit" type="submit" id="submit" tabindex="5" value="<?php esc_attr_e('Submit Comment'); ?>" />
-<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
-</p>
-<?php do_action('comment_form', $post->ID); ?>
-
-</form>
-
-<?php endif; // If registration required and not logged in ?>
-
-<?php else : // Comments are closed ?>
-<p><?php _e('Sorry, the comment form is closed at this time.'); ?></p>
-<?php endif; ?>
+</div><!-- #comments .comments-area -->
