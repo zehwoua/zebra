@@ -23,7 +23,7 @@ class Zebras_Recent_Blog_Posts extends WP_Widget {
 
     $control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'recent-post-widget' );
 
-    $this->WP_Widget( 'recent-post-widget', __('Zebras Recent Posts', 'example'), $widget_ops, $control_ops );
+    $this->WP_Widget( 'recent-post-widget', __('Zebras - Recent Posts', 'example'), $widget_ops, $control_ops );
   }
 
   function widget( $args, $instance ) {

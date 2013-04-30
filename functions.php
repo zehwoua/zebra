@@ -144,7 +144,8 @@ add_action( 'widgets_init', 'add_zebra_footers' );
 
 include($functions_path .'widget-recent-posts.php');
 include($functions_path .'widget-popular-posts.php');
-
+include($functions_path .'widget-twitter.php');
+include(get_template_directory().'/functions/zebras_buttons/shortcodes.php');
 
 /*-----------------------------------------------------------------------------------*/
 /*	Zebras Post view Count

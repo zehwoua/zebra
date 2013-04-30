@@ -23,7 +23,7 @@ class Zebras_Popular_Blog_Posts extends WP_Widget {
 
     $control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'popular-post-widget' );
 
-    $this->WP_Widget( 'popular-post-widget', __('Zebras Popular Posts', 'example'), $widget_ops, $control_ops );
+    $this->WP_Widget( 'popular-post-widget', __('Zebras - Popular Posts', 'example'), $widget_ops, $control_ops );
   }
 
   function widget( $args, $instance ) {

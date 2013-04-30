@@ -1,4 +1,12 @@
 <?php get_header();?>
+<?php
+$admin = dirname( __FILE__ ) ;
+$admin = substr( $admin , 0 , strpos( $admin , "wp-content" ) ) ;
+
+?>
+<script type="text/javascript" src="<?php echo $admin; ?>wp-includes/js/tinymce/tiny_mce_popup.js"></script>
+
+<style type="text/css" src="<?php echo $admin; ?>wp-includes/js/tinymce/themes/advanced/skins/wp_theme/dialog.css"></style>
 
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
