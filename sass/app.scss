@@ -109,27 +109,7 @@ a {
     width: 73%;
   }
 }
-/*========== LAYOUT ==========*/
-.size{
-  float: left;
-  margin-right: 2%;
-  &.size1{
-    width: 100%;
-    margin-right: 0;
-  }
-  &.size2{
-    width: 47%;
-  }
-  &.size3{
-    width: 31.333333%;
-  }
-  &.size4{
-    width: 23.5%;
-  }
-  &.last-size{
-    margin-right: 0;
-  }
-}
+
 /*========== PAGE ==========*/
 #page-title{
   background: rgba(79, 79, 79, 0.60) url(../images/bg-pattern.png);

@@ -1,12 +1,12 @@
 (function() {
-  tinymce.create('tinymce.plugins.buttonPlugin', {
+  tinymce.create('tinymce.plugins.layoutPlugin', {
     init : function(ed, url) {
       // Register commands
-      ed.addCommand('mcebutton', function() {
+      ed.addCommand('mcelayout', function() {
         ed.windowManager.open({
-          file : url + 'button_popup.php', // file that contains HTML for our modal window
-          width : 220 + parseInt(ed.getLang('button.delta_width', 0)), // size of our window
-          height : 240 + parseInt(ed.getLang('button.delta_height', 0)), // size of our window
+          file : url + 'layout_popup.php', // file that contains HTML for our modal window
+          width : 220 + parseInt(ed.getLang('layout.delta_width', 0)), // size of our window
+          height : 240 + parseInt(ed.getLang('layout.delta_height', 0)), // size of our window
           inline : 1
         }, {
           plugin_url : url
@@ -14,7 +14,7 @@
       });
 
       // Register buttons
-      ed.addButton('zebras_button', {title : 'Insert Button', cmd : 'mcebutton', image: url + '/includes/images/shortcode_button.gif' });
+      ed.addButton('zebras_layout', {title : 'Insert Layout', cmd : 'mcelayout', image: url + 'includes/images/shortcode_layout.gif' });
     },
 
     getInfo : function() {
@@ -31,6 +31,6 @@
   // Register plugin
   // first parameter is the button ID and must match ID elsewhere
   // second parameter must match the first parameter of the tinymce.create() function above
-  tinymce.PluginManager.add('zebras_button', tinymce.plugins.buttonPlugin);
+  tinymce.PluginManager.add('zebras_layout', tinymce.plugins.layoutPlugin);
 
 })();
