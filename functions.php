@@ -145,8 +145,7 @@ add_action( 'widgets_init', 'add_zebra_footers' );
 include($functions_path .'widget-recent-posts.php');
 include($functions_path .'widget-popular-posts.php');
 include($functions_path .'widget-twitter.php');
-include(get_template_directory().'/functions/zebras_buttons/shortcodes-button.php');
-include(get_template_directory().'/functions/zebras_buttons/shortcodes-layouts.php');
+include(get_template_directory().'/functions/generate-shortcodes.php');
 
 /*-----------------------------------------------------------------------------------*/
 /*	Zebras Post view Count
@@ -190,3 +189,7 @@ function posts_custom_column_views($column_name, $id){
         echo getPostViews(get_the_ID());
     }
 }
+
+function framework_url() {
+  	return esc_url( trailingslashit( get_template_directory_uri() . '/' . basename( dirname( __FILE__ ) ) ) );
+} // End framework_url()

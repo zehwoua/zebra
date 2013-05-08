@@ -2,7 +2,7 @@
 <?php
 $admin = dirname( __FILE__ ) ;
 $admin = substr( $admin , 0 , strpos( $admin , "wp-content" ) ) ;
-
+echo basename( dirname( __FILE__ ));
 ?>
 <script type="text/javascript" src="<?php echo $admin; ?>wp-includes/js/tinymce/tiny_mce_popup.js"></script>
 
