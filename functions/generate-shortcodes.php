@@ -89,8 +89,8 @@ class ZebrasShortcodes {
     wp_enqueue_script( 'jquery-livequery', ZEBRAS_SHORTCODE_URI . '/js/jquery.livequery.js', false, '1.1.1', false );
     wp_enqueue_script( 'jquery-appendo', ZEBRAS_SHORTCODE_URI . '/js/jquery.appendo.js', false, '1.0', false );
     wp_enqueue_script( 'base64', ZEBRAS_SHORTCODE_URI . '/js/base64.js', false, '1.0', false );
-    wp_enqueue_script( 'zebra-popup', ZEBRAS_SHORTCODE_URI . '/js/popup.js', false, '1.0', false );
-
+    wp_enqueue_script( 'zebra-popup', ZEBRAS_SHORTCODE_URI . '/js/shortcode_popup.js', false, '1.0', false );
+    wp_enqueue_style( 'zebras-popup', ZEBRAS_SHORTCODE_URI . 'css/zebras_popup.css' );
     wp_localize_script( 'jquery', 'ZebrasShortcodesFolder', array('shortcodes_folder' => ZEBRAS_SHORTCODE_URI ) );
   }
 

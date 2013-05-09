@@ -66,7 +66,7 @@ function shortcodes_variables(){
     "name" => "Create a box",
     "id" => "box_shortcode",
     "options" =>array(
-      "text" => array(
+      "content" => array(
         "type" => "textarea",
         "std" => "Box text",
         "label" => "Box Text",
@@ -93,6 +93,91 @@ function shortcodes_variables(){
           "round" => "Round",
           "less_round" => "Less Round",
           "square" => "Square")
+        )
+      )
+    ),
+  array(
+    "name" => "Create Columns",
+    "id" => "columns_shortcode",
+    "options" =>array(
+      "column_layout" => array(
+        "type" => "select",
+        "std" => "none",
+        "label" => "Column Type :",
+        "desc" => "Please select your column layout type.",
+        "options" =>array(
+          "none" => "Please Select Column Layout",
+          "size-two" => "Two Column Layout",
+          "size-three" => "Three Column Layout",
+          "size-four" => "Four Column Layout")
+        ),
+      "size-two" => array(
+        "type" => "select",
+        "display" => "hidden",
+        "std" => "size-two",
+        "label" => "Columns :",
+        "desc" => "Please select your columns.",
+        "options" =>array(
+          "size-two" => "Two one")
+        ),
+      "size-three" => array(
+        "type" => "select",
+        "display" => "hidden",
+        "std" => "size-three",
+        "label" => "Columns :",
+        "desc" => "Please select your columns.",
+        "options" =>array(
+          "size-three" => "Three one",
+          "size-three-two" => "Three two")
+        ),
+      "size-four" => array(
+        "type" => "select",
+        "display" => "hidden",
+        "std" => "size-four",
+        "label" => "Columns :",
+        "desc" => "Please select your columns.",
+        "options" =>array(
+          "size-four" => "Four one",
+          "size-four-two" => "Four two",
+          "size-four-three" => "Four three")
+        ),
+      "add-column-button" => array(
+        "type" => "button",
+        "label" => "Add Column"
+        ),
+      "column-error" => array(
+        "type" => "error",
+        "label" => "You cannot add anymore columns!"
+        ),
+      "show-columns" => array(
+        "type" => "column-display",
+        "label" => "Column Layout",
+        "desc" => "Your column Layout"
+        )
+      )
+    ),
+  array(
+    "name" => "Create a toggle",
+    "id" => "toggle_shortcode",
+    "options" =>array(
+      "title" => array(
+        "type" => "text",
+        "std" => "Your Toggle title",
+        "label" => "Toggle title",
+        "desc" => "Please enter your toggle title in here"),
+      "content" => array(
+        "type" => "textarea",
+        "std" => "Toggle Content",
+        "label" => "Toggle Content",
+        "desc" => "Please enter your toggle content in here"),
+      "state" => array(
+        "type" => "select",
+        "std" => "open",
+        "label" => "Toggle state",
+        "desc" => "Please select your toggle state. Default:Open",
+        "options" =>array(
+          "open" => "Open",
+          "close" => "Close")
         )
       )
     )

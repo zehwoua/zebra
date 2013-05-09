@@ -20,25 +20,26 @@ function shortcode_fields($key, $value, $id){
   $field_id = $id."_".$key;
   switch ($field) {
     case 'text':
-      $output .= '<div id="'.$key.'" class="zebras_shortcode_field">';
+      $output .= '<div id="'.$key.'" class="zebras_shortcode_field shortcode_text_field">';
+        $output .= '<p>'.$value['desc'].'</p>';
         $output .='<label class="shortcode_label" for ="'.$field_id.'">'.$value['label'].'</label>';
         $output .= '<input type="text" value="'.$value['std'].'" id ="'.$field_id.'" name ="'.$field_id.'"/>';
-        $output .= '<p>'.$value['desc'].'</p>';
       $output .= '</div>';
     break;
 
     case 'textarea':
-      $output .= '<div id="'.$key.'" class="zebras_shortcode_field">';
+      $output .= '<div id="'.$key.'" class="zebras_shortcode_field shortcode_textarea_field">';
+        $output .= '<p>'.$value['desc'].'</p>';
         $output .='<label class="shortcode_label" for ="'.$field_id.'">'.$value['label'].'</label>';
         $output .= '<textarea value="'.$value['std'].'" id ="'.$field_id.'" name ="'.$field_id.'"></textarea>';
-        $output .= '<p>'.$value['desc'].'</p>';
       $output .= '</div>';
     break;
 
     case 'select':
-      $output .= '<div id="'.$key.'" class="zebras_shortcode_field">';
+    if($value['display'] == 'hidden') $select_display = "select_hidden_display";
+      $output .= '<div id="'.$key.'" class="zebras_shortcode_field '.$select_display.'">';
         $output .='<label class="shortcode_label" for ="'.$field_id.'">'.$value['label'].'</label>';
-        $output .= '<select name="button-size" id ="'.$field_id.'" name ="'.$field_id.'" size="1">';
+        $output .= '<select name="button-size" id ="'.$field_id.'" name ="'.$field_id.'" class="zebras_popup_select">';
           foreach ($value['options'] as $select_key => $select_value) {
             if($value['std'] == $select_key){
               $select = "selected ='selected'";
@@ -48,6 +49,21 @@ function shortcode_fields($key, $value, $id){
         $output .= '</select>';
         $output .= '<p>'.$value['desc'].'</p>';
       $output .= '</div>';
+    break;
+
+    case 'column-display':
+      $output .= '<div id="'.$key.'" class="zebras_shortcode_field">';
+      $output .= '<div class="show-inner '.$field_id.' clearfix"></div>';
+      $output .= '</div>';
+    break;
+
+    case 'button':
+      $output .= '<input type="button" id="'.$key.'" class="popup_button" value="'.$value['label'].'"/>';
+    break;
+
+    case 'error':
+      $output .= '<span id="'.$key.'" class="shortcode_error">';
+      $output .= '</span>';
     break;
   }
   echo $output;

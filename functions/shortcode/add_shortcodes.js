@@ -11,7 +11,7 @@
         // console.log (url);
 
         // load thickbox
-        tb_show("Insert Zebras Shortcode", url + "/popup.php?popup=" + popup );
+        tb_show("Insert Zebras Shortcode", url + "/popup.php?popup=" + popup + "&width=" + 600 );
       });
     },
     createControl: function ( btn, e )

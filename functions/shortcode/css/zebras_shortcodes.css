@@ -154,22 +154,26 @@
 .size{
   float: left;
   margin-right: 2%;
+  margin-bottom: 20px;
 }
 .size.size-one{
     width: 100%;
     margin-right: 0;
 }
 .size.size-two{
-    width: 47%;
+    width: 49%;
 }
 .size.size-three{
-    width: 31.333333%;
+    width: 32%;
 }
 .size.size-three-two{
-    width: 66.666667%;
+    width: 66%;
 }
 .size.size-four{
     width: 23.5%;
+}
+.size.size-four-two{
+    width: 49%;
 }
 .size.size-four-three{
     width: 74.5%;
@@ -177,6 +181,7 @@
 .size.last-size{
     margin-right: 0;
 }
+
 
 /*========== BOXES STYLE ==========*/
 .zebras_box{
@@ -319,4 +324,38 @@
 }
 .zebras_box_square, .zebras_box_square .zebras_box_inner{
   -moz-border-radius:1px; -webkit-border-radius:1px; border-radius:1px
+}
+
+.zebras_toggle{
+
+}
+.zebras_toggle .zebras_toggle_title{
+  background: rgb(255,255,255);
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(238,238,238,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(238,238,238,1)));
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(238,238,238,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(238,238,238,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(238,238,238,1) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(238,238,238,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 );
+  box-shadow: 0px 1px 3px #aaa;
+  outline: none;
+  color: #999;
+  text-shadow: 1px 1px 1px #fff;
+}
+.zebras_toggle .zebras_toggle_title .toggle_title_inner{
+  background: url(../images/toggle-close-icon.png)no-repeat 98% 50% ;
+  padding: 15px 20px 15px 15px;
+}
+.zebras_toggle .zebras_toggle_title.ui-accordion-header-active .toggle_title_inner{
+  background: url(../images/toggle-open-icon.png)no-repeat 98% 50% ;
+}
+
+.zebras_toggle .zebras_toggle_title:hover{cursor: pointer;}
+.zebras_toggle .zebras_toggle_content{
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
 }

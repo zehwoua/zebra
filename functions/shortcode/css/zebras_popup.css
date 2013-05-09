@@ -1,0 +1,187 @@
+.zebras_popup_select{
+  font-size: 12px;
+  float: left;
+  min-width: 40%;
+  margin-right: 5%;
+}
+.zebras_shortcode_field {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #dadada;
+  padding-bottom: 15px;
+}
+.zebras_shortcode_field p{
+  padding: 0 !important;
+  color: #7a7a7a;
+  font-size: 10px;
+  line-height: 24px;
+}
+.zebras_shortcode_field label{
+  font-weight: bold;
+  min-width: 20%;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 11px;
+  float: left;
+  line-height: 24px;
+}
+.zebras_shortcode_field.shortcode_textarea_field p,
+.zebras_shortcode_field.shortcode_text_field p{
+  display: inline-block;
+  float: right;
+  margin: 0;
+}
+.zebras_shortcode_field.shortcode_textarea_field textarea{
+  height: 150px;
+}
+.select_hidden_display{
+  display: none;
+}
+#show-columns{
+  border: 1px solid #c0c0c0;
+  border-radius: 3px;
+  box-shadow: 0 0 3px #ddd;
+  display: none;
+  padding-bottom: 0 !important;
+  clear: both;
+}
+.show-inner{
+  border: 1px solid #fff;
+  border-radius: 3px;
+  min-height: 50px;
+  padding: 10px;
+  background: #3b3b3b url(../images/shortcode_column_pattern.png) repeat;
+}
+.column-show{
+  color: white;
+  text-align: center;
+  border-radius: 3px;
+  text-shadow: 0 1px 1px #000;
+  box-shadow: inset 1px 1px 1px #9a9a9a, inset -1px -1px 1px #4a4a4a;
+  position: relative;
+  background: #707070;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.column_type_name{
+  position: absolute;
+  top: 5px;
+  left: 8px;
+}
+.column-show-gradient{
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.15) 0%, rgba(85,85,85,0.15) 49%, rgba(135,135,135,0.15) 50%, rgba(255,255,255,0.15) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.15)), color-stop(49%,rgba(85,85,85,0.15)), color-stop(50%,rgba(135,135,135,0.15)), color-stop(100%,rgba(255,255,255,0.15)));
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.15) 0%,rgba(85,85,85,0.15) 49%,rgba(135,135,135,0.15) 50%,rgba(255,255,255,0.15) 100%);
+  background: -o-linear-gradient(top, rgba(0,0,0,0.15) 0%,rgba(85,85,85,0.15) 49%,rgba(135,135,135,0.15) 50%,rgba(255,255,255,0.15) 100%);
+  background: -ms-linear-gradient(top, rgba(0,0,0,0.15) 0%,rgba(85,85,85,0.15) 49%,rgba(135,135,135,0.15) 50%,rgba(255,255,255,0.15) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%,rgba(85,85,85,0.15) 49%,rgba(135,135,135,0.15) 50%,rgba(255,255,255,0.15) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26000000', endColorstr='#26ffffff',GradientType=0 );
+  padding: 22px 0 12px 0;
+}
+.column-show .column_delete{
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url(../images/column-delete.png)no-repeat;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.column-show .add_column_content{
+  margin: 0;
+  font-size: 9px;
+  display: inline-block;
+  color: white;
+  top: 5px;
+  left: 5px;
+  background: #2a2a2a;
+  padding: 0px 13px !important;
+  border-radius: 10px;
+  box-shadow: inset 1px 1px 1px #000;
+}
+.column-show .add_column_content.not_clickable{
+  opacity: 0.5;
+}
+.column-show .add_column_content.not_clickable:hover{cursor: auto;opacity: 0.5;}
+.column-show .add_column_content:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}
+.column-show .column_delete:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}
+.popup_button{
+  clear: both;
+  background: #999;
+  display: inline-block;
+  color: white;
+  padding: 7px 17px;
+  border-radius: 3px;
+  border: 1px solid #777;
+  box-shadow: inset 0 0 2px #fff;
+  text-transform: uppercase;
+  font-size: 11px;
+  display: none;
+  width: 20%;
+  text-align: center;
+  margin: 0 auto 15px;
+}
+.popup_button:hover{
+  cursor: pointer;
+  box-shadow: none;
+}
+.shortcode_error{
+  position: absolute;
+  z-index: 10;
+  padding: 10px;
+  background: rgba(255, 0, 0, 0.5);
+  left: 20px;
+  width: 90%;
+  top: 45%;
+  color: white;
+  text-align: center;
+  display: none;
+  border-radius: 5px;
+}
+#transparent{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  top: 0;
+  left: 0;
+}
+/*========== COLUMNS LAYOUT ==========*/
+.size{
+  float: left;
+  margin-right: 2%;
+}
+.size.size-one{
+    width: 100%;
+    margin-right: 0;
+}
+.size.size-two{
+    width: 49%;
+}
+.size.size-three{
+    width: 32%;
+}
+.size.size-three-two{
+    width: 66%;
+}
+.size.size-four{
+    width: 23.5%;
+}
+.size.size-four-two{
+    width: 49%;
+}
+.size.size-four-three{
+    width: 74.5%;
+}
+.size.last-size{
+    margin-right: 0;
+}
