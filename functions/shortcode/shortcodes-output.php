@@ -65,6 +65,7 @@ function shortcode_fields($key, $value, $id){
       $output .= '<span id="'.$key.'" class="shortcode_error">';
       $output .= '</span>';
     break;
+
   }
   echo $output;
 }// end of function shortcode_fields

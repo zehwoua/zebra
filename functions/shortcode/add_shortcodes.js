@@ -1,7 +1,7 @@
 (function ()
 {
   // create zillaShortcodes plugin
-  tinymce.create("tinymce.plugins.zebraShortcodes",
+  tinyMCE.create("tinyMCE.plugins.zebraShortcodes",
   {
     init: function ( ed, url )
     {
@@ -33,6 +33,9 @@
           a.addWithPopup( b, "Columns", "columns" );
           a.addWithPopup( b, "Tabs", "tabs" );
           a.addWithPopup( b, "Toggle", "toggle" );
+          a.addWithPopup( b, "Dropcap","dropcap" );
+          a.addImmediate( b, "Quote","quote" );
+          a.addWithPopup( b, "Testimonial","testimonial" );
         });
 
                 return btn;
@@ -55,7 +58,16 @@
       ed.add({
         title: title,
         onclick: function () {
-          tinyMCE.activeEditor.execCommand( "mceInsertContent", false, sc )
+
+          selected_text = '';
+
+              if ( tinyMCE.activeEditor.selection.getContent().length > 0 ) {
+
+                selected_text = tinyMCE.activeEditor.selection.getContent();
+
+              } // End IF Statement
+              shortcode_content = '['+sc+']'+ selected_text +'[/'+sc+']';
+          tinyMCE.activeEditor.execCommand( "mceInsertContent", false, shortcode_content )
         }
       })
     },
@@ -71,5 +83,5 @@
   });
 
   // add zebrasShortcodes plugin
-  tinymce.PluginManager.add("zebraShortcodes", tinymce.plugins.zebraShortcodes);
+  tinyMCE.PluginManager.add("zebraShortcodes", tinyMCE.plugins.zebraShortcodes);
 })();

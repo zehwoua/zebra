@@ -274,32 +274,29 @@ a {
 .post_container .post_content .storycontent {
   border-top: 1px solid white;
   padding-top: 20px;
-}
-/* line 224, ../sass/app.scss */
-.post_container .post_content .storycontent p {
   color: #817d78;
   font-size: 12px;
   line-height: 18px;
   letter-spacing: 0.08em;
   font-family: Georgia, Times, serif;
 }
-/* line 232, ../sass/app.scss */
+/* line 230, ../sass/app.scss */
 .post_container .post_content .meta {
   font-family: "PT Sans", sans-serif;
   font-size: 10px;
   letter-spacing: 0.1em;
   margin-top: 6px;
 }
-/* line 237, ../sass/app.scss */
+/* line 235, ../sass/app.scss */
 .post_container .post_content .meta a {
   color: #9f9f9f;
 }
-/* line 242, ../sass/app.scss */
+/* line 240, ../sass/app.scss */
 .post_container .post_tags {
   clear: both;
   float: right;
 }
-/* line 245, ../sass/app.scss */
+/* line 243, ../sass/app.scss */
 .post_container .post_tags a {
   font-family: "PT Sans", sans-serif;
   display: inline-block;
@@ -312,22 +309,22 @@ a {
   font-weight: 700;
   text-transform: uppercase;
 }
-/* line 256, ../sass/app.scss */
+/* line 254, ../sass/app.scss */
 .post_container .post_tags a:hover {
   opacity: 0.8;
 }
 
-/* line 262, ../sass/app.scss */
+/* line 260, ../sass/app.scss */
 #comments_section {
   clear: both;
 }
 
-/* line 265, ../sass/app.scss */
+/* line 263, ../sass/app.scss */
 #comments {
   width: 98%;
   float: right;
 }
-/* line 269, ../sass/app.scss */
+/* line 267, ../sass/app.scss */
 #comments .commentlist li {
   color: #817d78;
   font-size: 12px;
@@ -336,12 +333,12 @@ a {
   font-family: Georgia, Times, serif;
   position: relative;
 }
-/* line 275, ../sass/app.scss */
+/* line 273, ../sass/app.scss */
 #comments .commentlist li.comment {
   padding: 3%;
   margin-bottom: 20px;
 }
-/* line 278, ../sass/app.scss */
+/* line 276, ../sass/app.scss */
 #comments .commentlist li.comment .comment-edit-link {
   background: #5e504b;
   color: white;
@@ -351,15 +348,15 @@ a {
   letter-spacing: 1px;
   border-radius: 3px;
 }
-/* line 287, ../sass/app.scss */
+/* line 285, ../sass/app.scss */
 #comments .commentlist li.comment .comment-author {
   text-transform: uppercase;
 }
-/* line 292, ../sass/app.scss */
+/* line 290, ../sass/app.scss */
 #comments .commentlist li .comment-author {
   position: relative;
 }
-/* line 293, ../sass/app.scss */
+/* line 291, ../sass/app.scss */
 #comments .commentlist li .avatar {
   position: absolute;
   left: -19%;
@@ -369,12 +366,12 @@ a {
 }
 
 /*=========== WIDGET ===========*/
-/* line 304, ../sass/app.scss */
+/* line 302, ../sass/app.scss */
 #sidebar {
   margin-bottom: 20px;
 }
 
-/* line 305, ../sass/app.scss */
+/* line 303, ../sass/app.scss */
 h3.widget_title {
   text-transform: uppercase;
   font-size: 20px;
@@ -386,22 +383,22 @@ h3.widget_title {
   padding: 15px 0px;
 }
 
-/* line 315, ../sass/app.scss */
+/* line 313, ../sass/app.scss */
 .widget {
   margin-bottom: 30px;
   list-style-type: none;
 }
-/* line 318, ../sass/app.scss */
+/* line 316, ../sass/app.scss */
 .widget ul {
   padding: 0 20px 15px 20px;
 }
-/* line 320, ../sass/app.scss */
+/* line 318, ../sass/app.scss */
 .widget ul li {
   border-bottom: 1px solid white;
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
-/* line 324, ../sass/app.scss */
+/* line 322, ../sass/app.scss */
 .widget ul li a {
   color: #fff;
   display: block;
@@ -410,39 +407,39 @@ h3.widget_title {
   text-transform: uppercase;
   letter-spacing: 0.09em;
 }
-/* line 336, ../sass/app.scss */
+/* line 334, ../sass/app.scss */
 .widget .zebras_posts li img {
   float: left;
   margin-right: 4%;
 }
-/* line 340, ../sass/app.scss */
+/* line 338, ../sass/app.scss */
 .widget .zebras_posts li h4 {
   letter-spacing: 1px;
   font-size: 14px;
 }
-/* line 344, ../sass/app.scss */
+/* line 342, ../sass/app.scss */
 .widget .zebras_posts li .readmore {
   font-size: 10px;
   text-transform: none;
   letter-spacing: 1px;
 }
-/* line 349, ../sass/app.scss */
+/* line 347, ../sass/app.scss */
 .widget .zebras_posts li span.no-image {
   display: block;
   float: left;
   background: #4f4f4f;
   margin-right: 4%;
 }
-/* line 355, ../sass/app.scss */
+/* line 353, ../sass/app.scss */
 .widget .zebras_posts li:last-child {
   border-bottom: none;
   margin-bottom: 0;
 }
-/* line 361, ../sass/app.scss */
+/* line 359, ../sass/app.scss */
 .widget .tagcloud {
   padding: 0 20px 15px 20px;
 }
-/* line 363, ../sass/app.scss */
+/* line 361, ../sass/app.scss */
 .widget .tagcloud a {
   display: inline-block;
   padding: 5px 10px;
@@ -457,21 +454,21 @@ h3.widget_title {
 }
 
 /*=========== FOOTER ===========*/
-/* line 378, ../sass/app.scss */
+/* line 376, ../sass/app.scss */
 #footer {
   margin-top: 40px;
   background: rgba(79, 79, 79, 0.6) url(../images/bg-pattern.png);
 }
-/* line 381, ../sass/app.scss */
+/* line 379, ../sass/app.scss */
 #footer #footer_wrap {
   background: none;
   box-shadow: none;
 }
-/* line 384, ../sass/app.scss */
+/* line 382, ../sass/app.scss */
 #footer #footer_wrap .inner {
   background: url(../images/bg.png) repeat;
 }
-/* line 386, ../sass/app.scss */
+/* line 384, ../sass/app.scss */
 #footer #footer_wrap .inner .footer-bg {
   background: #4f4f4f;
   min-height: 200px;

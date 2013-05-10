@@ -345,11 +345,11 @@
   text-shadow: 1px 1px 1px #fff;
 }
 .zebras_toggle .zebras_toggle_title .toggle_title_inner{
-  background: url(../images/toggle-close-icon.png)no-repeat 98% 50% ;
+  background: url(../images/toggle-close-icon.png)no-repeat right 50% ;
   padding: 15px 20px 15px 15px;
 }
 .zebras_toggle .zebras_toggle_title.ui-accordion-header-active .toggle_title_inner{
-  background: url(../images/toggle-open-icon.png)no-repeat 98% 50% ;
+  background: url(../images/toggle-open-icon.png)no-repeat right 50% ;
 }
 
 .zebras_toggle .zebras_toggle_title:hover{cursor: pointer;}
@@ -358,4 +358,125 @@
   background-color: #fff;
   border: 1px solid #ddd;
   border-top: none;
+}
+
+/*========== DROPCAPS ==========*/
+.zebras_dropcap {
+  font-size: 600%;
+  float: left;
+  line-height: 0.8em;
+  font-family: Serif;
+  font-weight: bold;
+  position: relative;
+  left: -3px;
+  text-transform: uppercase;
+}
+.zebras_dropcap_gray{
+  color:gray;
+}
+.zebras_dropcap_blue{
+  color:blue;
+}
+.zebras_dropcap_green{
+  color:green;
+}
+.zebras_dropcap_black{
+  color:black;
+}
+/*========== QUOTES ==========*/
+
+.zebras_quote {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-style: italic;
+  margin: 0.4em 1.25em 0.4em 0;
+  padding: 0.25em 40px;
+  line-height: 1.45;
+  position: relative;
+  color: #383838;
+  display: inline-block;
+}
+.zebras_quote:before {
+  display: block;
+  content: "\201C";
+  font-size: 80px;
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  color: #7a7a7a;
+}
+
+.zebras_quote:after {
+  display: block;
+  content: "\201D";
+  font-size: 80px;
+  position: absolute;
+  right: -5px;
+  bottom: -65px;
+  color: #7a7a7a;
+}
+
+/*========== TESTIMONIAL ==========*/
+.zebras_testimonial{
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: Georgia, serif;
+  font-size: 14px;
+  font-style: italic;
+  position: relative;
+}
+
+.zebras_testimonial:after,
+.zebras_testimonial:before {
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 20px solid #fff;
+    bottom: -20px;
+    content: '';
+    right: 50px;
+    margin-right: -21px;
+    position: absolute;
+}
+
+/* Styling for second triangle (border) */
+
+.zebras_testimonial:before {
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 21px solid;
+    border-top-color: inherit;
+    bottom: -21px;
+    margin-right: -22px;
+}
+.zebras_testimonial_inner{
+  padding: 25px 30px 25px 70px;
+  position: relative;
+}
+.zebras_testimonial_inner:before{
+  display: block;
+  content: "\201C";
+  font-size: 80px;
+  position: absolute;
+  left: 15px;
+  top: 50px;
+  color: #7a7a7a;
+}
+.testimonial_person_detail{
+  float: right;
+  position: relative;
+  padding-top: 25px;
+  text-align: right;
+}
+.testimonial_person_name{
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-shadow: 1px 1px 1px #fff;
+}
+.testimonial_person_title{
+  font-size: 12px;
+  font-style: italic;
+  color: #999;
 }

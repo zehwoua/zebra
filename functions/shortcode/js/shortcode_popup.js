@@ -11,6 +11,7 @@ jQuery(document).ready(function($){
       if($('#columns').length > 0 ){
         zebras.column();
       }else{
+        zebras.grap_selected_content();
         zebras.insert();
       }
     },
@@ -188,6 +189,21 @@ jQuery(document).ready(function($){
     }
 
     },
+    grap_selected_content: function(){
+      selected_text = '';
+
+      if ( tinyMCE.activeEditor.selection.getContent().length > 0 ) {
+
+        selected_text = tinyMCE.activeEditor.selection.getContent();
+
+      } // End IF Statement
+
+      content_id = $('.zebras_shortcode_name').attr("id");
+
+      if(selected_text != ''){
+        $('#'+content_id+'_shortcode_content').val(selected_text);
+      }
+    },
     insert: function(){
       $("#insert").click(function(e){
         shortcode_text_content = '';
@@ -199,15 +215,16 @@ jQuery(document).ready(function($){
             shortcode_field = $(this).attr('id');
             sc = shortcode_id + '_shortcode_' + shortcode_field;
             shortcode_value = $("#"+sc).val();
-            if(shortcode_value != ''){
-              if(shortcode_field != 'content'){
-                output += shortcode_field +'="'+ shortcode_value+ '" ';
-              }else{
+
+            if(shortcode_field == 'content'){
+              if(shortcode_value != ''){
                 shortcode_text_content = ']' + shortcode_value;
+              }else{
+                shortcode_text_content = ']';
               }
-            }
-            else{
-              shortcode_text_content = ']';
+
+            }else if(shortcode_value != '' && shortcode_field != 'content'){
+              output += shortcode_field +'="'+ shortcode_value+ '" ';
             }
           });
 

@@ -83,7 +83,6 @@ ol#comments li p {
 
 p, li, .feedback {
   font: 90%/175% 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
-  letter-spacing: -1px;
 }
 
 /* classes used by the_meta() */

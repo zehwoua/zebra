@@ -120,3 +120,56 @@ function zebras_toggle_shortcode( $atts, $content = null )
 
 }
 add_shortcode('toggle', 'zebras_toggle_shortcode');
+
+/*-----------------------------------------------------------------------------------*/
+/*  Setting up Dropcap shortcodes
+/*-----------------------------------------------------------------------------------*/
+
+function zebras_dropcap_shortcode( $atts, $content = null )
+{
+      extract( shortcode_atts( array(
+        'color' => 'gray'
+      ), $atts ) );
+      return '<span class="zebras_dropcap zebras_dropcap_'.$color.'">' . do_shortcode($content) . '</span>';
+
+}
+add_shortcode('dropcap', 'zebras_dropcap_shortcode');
+
+/*-----------------------------------------------------------------------------------*/
+/*  Setting up Quote shortcodes
+/*-----------------------------------------------------------------------------------*/
+
+function zebras_quote_shortcode( $atts, $content = null )
+{
+      extract( shortcode_atts( array(
+        'color' => 'gray'
+      ), $atts ) );
+      return '<blockquote class="zebras_quote" >' . do_shortcode($content) . '</blockquote>';
+
+}
+add_shortcode('quote', 'zebras_quote_shortcode');
+
+/*-----------------------------------------------------------------------------------*/
+/*  Setting up Testimonial shortcodes
+/*-----------------------------------------------------------------------------------*/
+
+function zebras_testimonial_shortcode( $atts, $content = null )
+{
+      extract( shortcode_atts( array(
+        'name' => 'person name',
+        'title' => 'person title'
+      ), $atts ) );
+      $test = '<div class="testimonial_container clearfix>">
+                <div class="zebras_testimonial" >
+                  <div class="zebras_testimonial_inner">' . do_shortcode($content) . '</div>
+                </div>';
+
+      $test .=   '<div class="testimonial_person_detail">
+                  <p class="testimonial_person_name">'.$name.'</p>
+                  <p class="testimonial_person_title">'.$title.'</p>
+                </div>
+              </div><!--/testimonial_conteiner-->';
+      return $test;
+
+}
+add_shortcode('testimonial', 'zebras_testimonial_shortcode');

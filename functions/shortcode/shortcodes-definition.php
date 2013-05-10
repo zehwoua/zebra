@@ -170,7 +170,7 @@ function shortcodes_variables(){
         "std" => "Toggle Content",
         "label" => "Toggle Content",
         "desc" => "Please enter your toggle content in here"),
-      "state" => array(
+      "type" => array(
         "type" => "select",
         "std" => "open",
         "label" => "Toggle state",
@@ -179,6 +179,50 @@ function shortcodes_variables(){
           "open" => "Open",
           "close" => "Close")
         )
+      )
+    ),
+  array(
+    "name" => "Create a dropcap",
+    "id" => "dropcap_shortcode",
+    "options" =>array(
+      "content" => array(
+        "type" => "text",
+        "std" => "Dropcap Content",
+        "label" => "Dropcap Content",
+        "desc" => "Please enter your dropcap content in here"),
+      "color" => array(
+        "type" => "select",
+        "std" => "gray",
+        "label" => "Dropcap Color",
+        "desc" => "Please select your dropcap color. Default:gray",
+        "options" =>array(
+          "gray" => "Gray",
+          "blue" => "Blue",
+          "red" => "Red",
+          "green" => "Green",
+          "black" => "Black")
+        )
+      )
+    ),
+  array(
+    "name" => "Create a testimonial",
+    "id" => "testimonial_shortcode",
+    "options" =>array(
+      "content" => array(
+        "type" => "textarea",
+        "std" => "Testimonial Content",
+        "label" => "Testimonial Content",
+        "desc" => "Please enter your testimonial content in here"),
+      "name" => array(
+        "type" => "text",
+        "std" => "The person's name",
+        "label" => "The person's name",
+        "desc" => "Please enter the name of the person in here"),
+      "title" => array(
+        "type" => "text",
+        "std" => "The person's title",
+        "label" => "The person's title",
+        "desc" => "Please enter the title/company of the person in here")
       )
     )
   );
