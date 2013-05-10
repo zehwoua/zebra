@@ -224,7 +224,34 @@ function shortcodes_variables(){
         "label" => "The person's title",
         "desc" => "Please enter the title/company of the person in here")
       )
-    )
+    ),
+  array(
+    "name" => "Create a divider",
+    "id" => "divider_shortcode",
+    "options" =>array(
+      "style" => array(
+        "type" => "select",
+        "std" => "",
+        "label" => "Divider Style",
+        "desc" => "Please select your divider style. Default:normal",
+        "options" =>array(
+          "" => "select divider style",
+          "normal" => "normal",
+          "style1" => "Style 1",
+          "style2" => "Style 2",
+          "style3" => "Style 3",
+          "style4" => "Style 4",
+          "style5" => "Style 5",
+          "style6" => "Style 6",
+          "style7" => "Style 7")
+        ),
+      "show-columns" => array(
+        "type" => "column-display",
+        "label" => "Divider Preview",
+        "desc" => "You can preview your divider"
+        )
+      )
+    ),
   );
   return $shortcode_options;
 }

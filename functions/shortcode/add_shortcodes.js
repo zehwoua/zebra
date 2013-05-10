@@ -36,6 +36,7 @@
           a.addWithPopup( b, "Dropcap","dropcap" );
           a.addImmediate( b, "Quote","quote" );
           a.addWithPopup( b, "Testimonial","testimonial" );
+          a.addWithPopup( b, "Divider","divider" );
         });
 
                 return btn;

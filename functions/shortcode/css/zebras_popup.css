@@ -185,3 +185,56 @@
 .size.last-size{
     margin-right: 0;
 }
+
+/*========== DIVIDERS ==========*/
+
+.zebras_divider{
+  clear: both;
+  box-shadow: none;
+  border-width: 0px 0px 1px;
+  margin-bottom: 40px;
+}
+.zebras_divider_normal{
+  border: 1px solid #ddd;
+}
+.zebras_divider_style1{
+  background: rgba(221, 221, 221, 0.48) url(../images/bg-pattern.png) repeat;
+  height: 10px;
+  border:none;
+}
+.zebras_divider_style2{
+  background: url(../images/divider-style2.png) repeat;
+  height: 10px;
+  border:none;
+}
+.zebras_divider_style3{
+  background: url(../images/divider-style3.png) repeat bottom;
+  height: 11px;
+  border: none;
+}
+
+.zebras_divider_style4{
+  border-style: dashed;
+  border-width: 1px;
+  border-top: 0;
+  color: #b9b9b9;
+}
+
+.zebras_divider_style5{
+  border-width: 2px;
+  border-top: 0;
+  border-color: #ccc;
+  box-shadow: 0 1px 4px rgba(153, 153, 153, 0.33);
+}
+.zebras_divider_style6{
+  border-style: dotted;
+  border-width: 2px;
+  border-top: 0;
+  color: #b9b9b9;
+}
+.zebras_divider_style7{
+  background: url(../images/divider-style7.png) repeat bottom;
+  height: 11px;
+  border: none;
+}
+

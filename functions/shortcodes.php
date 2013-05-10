@@ -173,3 +173,18 @@ function zebras_testimonial_shortcode( $atts, $content = null )
 
 }
 add_shortcode('testimonial', 'zebras_testimonial_shortcode');
+
+/*-----------------------------------------------------------------------------------*/
+/*  Setting up Quote shortcodes
+/*-----------------------------------------------------------------------------------*/
+
+function zebras_divider_shortcode( $atts, $content = null )
+{
+      extract( shortcode_atts( array(
+        'style' => 'normal'
+      ), $atts ) );
+      return '<hr class="zebras_divider zebras_divider_'.$style.'" />';
+
+}
+add_shortcode('divider', 'zebras_divider_shortcode');
+

@@ -11,6 +11,7 @@ jQuery(document).ready(function($){
       if($('#columns').length > 0 ){
         zebras.column();
       }else{
+        if($('#divider').length > 0 ) zebras.divider_preview();
         zebras.grap_selected_content();
         zebras.insert();
       }
@@ -204,6 +205,14 @@ jQuery(document).ready(function($){
         $('#'+content_id+'_shortcode_content').val(selected_text);
       }
     },
+    divider_preview : function(){
+      $("#divider #divider_shortcode_style").change(function(){
+        $('#show-columns .show-inner').empty();
+        selected_divider = $("#divider_shortcode_style option:selected").val();
+        divider = '<hr class="zebras_divider zebras_divider_'+selected_divider+'"/>';
+        $('#show-columns').show().find('.show-inner').append(divider);
+      });
+    },
     insert: function(){
       $("#insert").click(function(e){
         shortcode_text_content = '';
@@ -215,7 +224,6 @@ jQuery(document).ready(function($){
             shortcode_field = $(this).attr('id');
             sc = shortcode_id + '_shortcode_' + shortcode_field;
             shortcode_value = $("#"+sc).val();
-
             if(shortcode_field == 'content'){
               if(shortcode_value != ''){
                 shortcode_text_content = ']' + shortcode_value;
@@ -223,8 +231,13 @@ jQuery(document).ready(function($){
                 shortcode_text_content = ']';
               }
 
-            }else if(shortcode_value != '' && shortcode_field != 'content'){
-              output += shortcode_field +'="'+ shortcode_value+ '" ';
+            }else if(shortcode_field != 'content' && shortcode_field != 'show-columns'){
+              if(shortcode_value != '' ){
+                output += shortcode_field +'="'+ shortcode_value+ '" ';
+                shortcode_text_content = ']';
+              }else{
+                shortcode_text_content = ']';
+              }
             }
           });
 
